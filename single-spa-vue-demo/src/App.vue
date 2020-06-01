@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="vue">
     <h1>single spa vue demo</h1>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-#app {
+#vue {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

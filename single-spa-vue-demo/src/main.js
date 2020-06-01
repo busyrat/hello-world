@@ -7,6 +7,13 @@ const vueOptions = {
   render: h => h(App)
 }
 
+// 独立运行
+if (!window.singleSpaNavigate) {
+  // 如果不是single-spa模式
+  delete vueOptions.el
+  new Vue(vueOptions).$mount('#vue')
+}
+
 // singleSpaVue包装一个vue微前端服务对象
 const vueLifecycles = singleSpaVue({
   Vue,
