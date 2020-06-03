@@ -1,5 +1,5 @@
 {
-  "name": "single-spa-vue-demo",
+  "name": "single-spa-sub-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
