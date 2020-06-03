@@ -19,6 +19,12 @@
             </a>
           </a-menu-item>
         </a-sub-menu>
+        <a-menu-item key="2">
+          <router-link to="react">
+            <a-icon type="video-camera" />
+            <span>React</span>
+          </router-link>
+        </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout>
@@ -26,6 +32,7 @@
       <a-layout-content :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
         <div class="content">
           <!--这是右侧内容栏-->
+          <div id="react-app"></div>
           <div id="single-vue" class="single-spa-vue">
             <div id="vue"></div>
           </div>

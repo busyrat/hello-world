@@ -37,7 +37,7 @@ const getManifest = (url, bundle) =>
 
 singleSpa.registerApplication(
   //注册微前端服务
-  'singleDemo',
+  'vueApp',
   async () => {
     let singleVue = null
     await getManifest('http://localhost:3000/manifest.json', 'app').then(() => {
@@ -47,6 +47,15 @@ singleSpa.registerApplication(
   },
 
   location => location.pathname.startsWith('/vue') // 配置微前端模块前缀
+)
+
+singleSpa.registerApplication(
+  'reactApp',
+  async () => {
+    await runScript('http://localhost:3001/static/js/main.js')
+    return window.reactApp
+  },
+  location => location.pathname.startsWith('/react')
 )
 
 singleSpa.start() // 启动
